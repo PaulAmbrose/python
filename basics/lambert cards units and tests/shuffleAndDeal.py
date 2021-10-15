@@ -39,6 +39,13 @@ def test1ShufflePack(startingPack, endingPack):
     else:
         print("Test failed")
 
+def DealACard(packToDealFrom):
+
+    cardToDealIndex = random.randint(0,len(packToDealFrom))
+    cardToDeal = packToDealFrom[cardToDealIndex]
+    packToDealFrom.remove(cardToDeal)
+    return cardToDeal, packToDealFrom
+
 def shuffleCardPack(packList):
     
     shuffledPack = random.sample(packList, len(packList))
@@ -48,6 +55,9 @@ def shuffleCardPack(packList):
 def main():
     
     shuffledPack = shuffleCardPack(startPackNotShuffled)
+    cardDeal = DealACard(shuffledPack)
+    print("Card Dealt " + cardDeal[0])
+    print("new Pack " + str(cardDeal[1]))
     #test1ShufflePack(startPackNotShuffled, shuffledPack)
     
 main()
