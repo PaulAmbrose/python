@@ -14,42 +14,40 @@ startPackNotShuffled = [
     "A-D", "K-D", "Q-D", "J-D", "10-D", "9-D", "8-D", "7-D", "6-D", "5-D", "4-D", "3-D", "2-D"
     ]
 
-endPackShuffled = []
-
-def test1ShufflePack():
-    print("Start of test: the pack is " + str(startPackNotShuffled))
-    print("Number of cards is " + str(len(startPackNotShuffled)))
+def test1ShufflePack(startingPack, endingPack):
         
-        shuffleCardPack()
-    
-    print("End of test: the pack is " + str(len(endPackShuffled)))
-    print("Number of cards is " + str(len(endPackShuffled)))
-    
     correspondingItems = 0
     nonCorrespondingItems = 0
-    
-    for card in startPackNotShuffled:
-        if startPackNotShuffled != endPackShuffled:
+
+    counter = 0
+    for card in startingPack:
+
+        if card == endingPack[counter]:
             correspondingItems = correspondingItems + 1
+            counter = counter + 1
         else:
             nonCorrespondingItems = nonCorrespondingItems  + 1
+            counter = counter + 1
     
-    if nonCorrespondingItems > 1:
+    if nonCorrespondingItems >= 1:
         mathOrderCheck = "NotMatching"
     else:
         mathOrderCheck = "Matching"
     
-    if len(startPackNotShuffled) == len(endPackShuffled) and mathOrderCheck == "NotMatching":
+    if len(startingPack) == len(endingPack) and mathOrderCheck == "NotMatching":
         print("Test passed")
     else:
         print("Test failed")
 
-def shuffleCardPack():
+def shuffleCardPack(packList):
     
+    shuffledPack = random.sample(packList, len(packList))
+    print("pack shuffled complete")
+    return shuffledPack
 
-    
 def main():
     
-    test1ShufflePack()
+    shuffledPack = shuffleCardPack(startPackNotShuffled)
+    #test1ShufflePack(startPackNotShuffled, shuffledPack)
     
 main()
