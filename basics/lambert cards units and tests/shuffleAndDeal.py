@@ -56,8 +56,6 @@ def main():
     
     shuffledPack = shuffleCardPack(startPackNotShuffled)
     cardDeal = DealACard(shuffledPack)
-    print("Card Dealt " + cardDeal[0])
-    print("new Pack " + str(cardDeal[1]))
     #test1ShufflePack(startPackNotShuffled, shuffledPack)
     
 main()
