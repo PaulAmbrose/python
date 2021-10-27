@@ -1,0 +1,22 @@
+https://iot4beginners.com/temperature-sensor-with-raspberry-pi-ds18b20/
+
+Setup
+First we need to alter the Raspberry Pi’s config file to enable the 1 wire interfacing (use by this sensor).
+
+Open /boot/config.txt with your favorite text editor
+sudo nano /boot/config.txt
+canAdd the following line to the bottom of the file
+dtoverlay=w1-gpio,gpiopin=4
+You should also load in the device kernel modules by running the following
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+Testing the sensor
+Open your terminal at the location of the temperature sensor.
+cd /sys/bus/w1/devices
+Write the command ls to list out all w1 devices. you will see an alpha numeric similar to 28-0314977912af, this number is the serial number of your sensor. You must cd into this directory with cd 28-0314977912af.
+Next, we have to list out the contents of the file named w1_slave.
+cat w1_slave
+You will get an output similar to this
+dd 01 55 05 7f a5 a5 66 81 : crc=81 YES
+dd 01 55 05 7f a5 a5 66 81 t=29812
+The number that follows t=is the temperature in micro degree celcius (10^-3).
