@@ -1,3 +1,4 @@
+#dynamically reads file name from command prompt inputs
 from sys import argv
 
 script, filename = argv
