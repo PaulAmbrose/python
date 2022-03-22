@@ -13,7 +13,7 @@ $ source env/bin/activate
 $ deactivate
 
 
->> Install and use Virtual Env Wrapper
+>> Install and use Virtual Env Wrapper - https://virtualenvwrapper.readthedocs.io/en/latest/install.html
 pip3 install virtualenvwrapper
 which virtualenvwrapper.sh (add this and other two lines to ~/.bashrc as per below)
 
