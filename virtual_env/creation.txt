@@ -20,3 +20,12 @@ which virtualenvwrapper.sh (add this and other two lines to ~/.bashrc as per bel
 export WORKON_HOME=$HOME/.virtualenvs   # Optional
 export PROJECT_HOME=$HOME/projects      # Optional
 source /usr/local/bin/virtualenvwrapper.sh
+
+  >>To create a new venv
+  mkvirtualenv my-new-project
+  
+  List Virtual Environments
+  $ workon
+
+  To enter
+  workon web-scraper
