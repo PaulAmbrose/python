@@ -15,3 +15,8 @@ $ deactivate
 
 >> Install and use Virtual Env Wrapper
 pip3 install virtualenvwrapper
+which virtualenvwrapper.sh (add this and other two lines to ~/.bashrc as per below)
+
+export WORKON_HOME=$HOME/.virtualenvs   # Optional
+export PROJECT_HOME=$HOME/projects      # Optional
+source /usr/local/bin/virtualenvwrapper.sh
