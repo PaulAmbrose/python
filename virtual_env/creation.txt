@@ -1,0 +1,13 @@
+>>Create env
+
+$ pip install virtualenv
+$ mkdir python-virtual-environments && cd python-virtual-environments
+$ python3 -m venv env
+
+>>To activate, navigate to level above env (above)
+
+$ source env/bin/activate
+
+>>To deactivate
+
+$ deactivate
