@@ -11,3 +11,7 @@ $ source env/bin/activate
 >>To deactivate
 
 $ deactivate
+
+
+>> Install and use Virtual Env Wrapper
+pip3 install virtualenvwrapper
