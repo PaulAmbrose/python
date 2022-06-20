@@ -1,34 +1,11 @@
-Summary
-https://realpython.com/python-virtual-environments-a-primer/
-
->>Create env
-
-$ pip install virtualenv
-$ mkdir python-virtual-environments && cd python-virtual-environments
-$ python3 -m venv env
-
->>To activate, navigate to level above env (above)
-
-$ source env/bin/activate
-
->>To deactivate
-
-$ deactivate
-
-
->> Install and use Virtual Env Wrapper - https://virtualenvwrapper.readthedocs.io/en/latest/install.html
-pip3 install virtualenvwrapper
-which virtualenvwrapper.sh (add this and other two lines to ~/.bashrc as per below)
-
-export WORKON_HOME=$HOME/.virtualenvs   # Optional
-export PROJECT_HOME=$HOME/projects      # Optional
-source /*usr*/.local/bin/virtualenvwrapper.sh
-
-  >>To create a new venv
-  mkvirtualenv my-new-project
+Install virtual env
+  >>sudo pip install virtualenv
   
-  List Virtual Environments
-  $ workon
+  >>mkdir ~/.venvs
+  (create a folder in home directory to store all your virtual environments)
 
-  To enter
-  workon web-scraper
+  >>virtualenv --system-site-packages ~/.venvs/lpthw
+  (run virtual environment and include system site packages, instruct to build virtual env in .venvs/lpthw
+  
+  >>./ ~/.venvs/lpthw/bin/activate
+  (source, and enter the virtual env)
